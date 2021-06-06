@@ -20,6 +20,8 @@ const AdAdds = () => {
       const formData = new FormData()
       formData.append('mainTitle', mainTitle)
       formData.append('km', km)
+      formData.append('price', price)
+      formData.append('description', description)
 
       images.map((image, index) => {
         formData.append('images', {
@@ -72,9 +74,14 @@ const AdAdds = () => {
         onChangeText={(text) => setDescription(text)}
       />
 
-      <TouchableOpacity onPress={addPhoto}>
-        <Text>
-          SELECT
+      <TouchableOpacity
+        style={{
+          justifyContent: 'center', alignItems: 'center', marginTop: 100, backgroundColor: 'purple', marginHorizontal: 20, borderRadius: 20
+        }}
+        onPress={addPhoto}
+      >
+        <Text style={{ color: 'white', paddingVertical: 10, fontSize: 20 }}>
+          SELECT Fotos
         </Text>
       </TouchableOpacity>
 

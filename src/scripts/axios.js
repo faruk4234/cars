@@ -7,7 +7,7 @@ export const instance = axios.create({
 
 export const storeData = async (value) => {
   try {
-    await AsyncStorage.setItem('@storage_Key', value)
+    await AsyncStorage.setItem('key', value)
   } catch (e) {
     // saving error
   }

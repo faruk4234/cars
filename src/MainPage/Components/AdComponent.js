@@ -20,7 +20,6 @@ const Main = (data) => {
           {data.item.mainTitle}
           {' '}
         </Text>
-        <Text style={styles.nameSurnameTitle}> name Surname </Text>
       </View>
 
       <SliderBox
@@ -30,11 +29,22 @@ const Main = (data) => {
       />
 
       <View style={styles.childContainer}>
-        <Text style={styles.kmTitle}>KM=</Text>
-        <Text style={styles.kmTitle}>Price=150.000 Tl</Text>
+        <Text style={styles.kmTitle}>
+          KM=
+          {data.item.km}
+        </Text>
+        <Text style={styles.kmTitle}>
+          Price=
+          {data.item.price}
+          {' '}
+          Tl
+        </Text>
       </View>
 
-      <Text style={{ textAlign: 'center', paddingTop: 10 }}> açıklama lorem ipsum, lorem ipsum, lorem ipsum lorem ipsum lorem ipsum</Text>
+      <Text style={{ textAlign: 'center', paddingTop: 10 }}>
+        {' '}
+        {data.item.description}
+      </Text>
 
     </View>
   )
