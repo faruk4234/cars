@@ -29,7 +29,7 @@ const Login = ({ navigation }) => {
       setPassword({ ...password, error: passwordError })
     } else {
       console.log(email, password)
-      axios.post('http://10.0.2.2:3000/users/loginn', {
+      axios.post('http://10.0.2.2:3000/users/login', {
         email: email.value,
         password: password.value
       }).then((response) => {
@@ -87,9 +87,11 @@ const Login = ({ navigation }) => {
           colors={['#FF0000', '#FF0066', '#800080']}
           style={styles.linearGradient}
         >
+
           <Text style={styles.buttonText}>
             LOGİN
           </Text>
+
         </LinearGradient>
       </TouchableOpacity>
 
